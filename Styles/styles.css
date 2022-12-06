@@ -1,0 +1,314 @@
+:root {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1vw;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url("./../Fonts/Metropolis/Metropolis-Light.otf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Desktop View */
+#main {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+#main #container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: repeat(4, 25%);
+    column-gap: 0;
+    row-gap: 0;
+}
+
+#main #container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(136deg,#FCF3F3,#FCF3F3,#FFFFFF,#FAF1F0,#FAF1F0,#FAF1F0);
+    box-sizing: border-box;
+}
+
+/* Logo */
+#main #container #logo-container {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+#main #container #logo-container {
+    margin: 0;
+    font-family: 'Avenir';
+    color: #5F5A5A;
+}
+
+#main #container #logo-container #web-link {
+    text-decoration: none;
+}
+
+#main #container #logo-container #web-link #fig {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin: 6% 0 0 16%;
+    border: 0.2vw solid #E7A09E;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#main #container #logo-container #web-link #base-apparel {
+    display: inline-block;
+    margin-left: 0.5%;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    line-height: 1.3em;
+    /* color: #5F5A5A; */
+}
+
+/* Image */
+#main #container #image {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 4;
+}
+
+#main #container #image {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: url("./../Images/Image-Portrait@2x.png");
+    background-size: cover;
+}
+
+/* #main #container #image img {
+    width: 100%;
+    background-size: cover;
+} */
+
+/* Content */
+#main #container #content {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 2;
+}
+
+#main #container #content h1 {
+    margin: 3% 0 0 16%;
+    font-family: 'Avenir';
+    font-size: 3.5em;
+    font-weight: 100;
+    letter-spacing: 0.2em;
+    line-height: 1.2em;
+    color: #393334;
+}
+
+#main #container #content h1 span {
+    color: #D2A1A2;
+}
+
+#main #container #content p {
+    width: 60%;
+    margin-left: 16%;
+    font-weight: 500;
+    line-height: 1.7em;
+    color: #9A6B69;
+}
+
+/* Input Field */
+#main #container #email-field {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+}
+
+#main #container #email-field #email-id {
+    width: 45%;
+    margin-left: 16%;
+    padding: 1.4% 3%;
+    border: 2px solid #9A6B69;
+    border-radius: 30px;
+    outline: none;
+    font-size: 1em;
+}
+
+#main #container #email-field #submit-button {
+    margin-left: -5%;
+    padding: 1.5% 4.5%;
+    font-size: 1em;
+    color: #FFFDFE;
+    background-color: #E7A09E;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 3px #000029;
+    cursor: pointer;
+}
+
+#main #container #email-field #submit-button:hover {
+    background-color: rgb(42, 42, 255);
+}
+
+
+
+/* Tablet View */
+@media screen and (max-width: 992px) {
+    #main #container {
+        display: block;
+        width: 100%;
+    }
+
+    /* Logo */
+    #main #container #logo-container {
+        width: 100%;
+        height: 30%;
+        margin-bottom: 6%;
+    }
+
+    #main #container #logo-container #web-link #fig {
+        width: 8vw;
+        height: 8vw;
+        margin: 10% 0 0 10%;
+        border: 0.6vw solid #E7A09E;
+    }
+    
+    #main #container #logo-container #web-link #base-apparel {
+        margin-left: 3%;
+        font-size: 4em;
+        letter-spacing: 0.3em;
+        line-height: 1.5em;
+    }
+
+    /* Image */
+    #main #container #image {
+        width: 100%;
+        height: 70vw;
+        margin: 0;
+        background-image: url("./../Images/Image-Landscape@2x.png");
+    }
+
+    /* Content */
+    #main #container #content {
+        display: block;
+        text-align: left;
+        padding-left: 15%;
+    }
+
+    #main #container #content h1 {
+        margin: 10% auto 5%;
+        font-size: 8em;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+    }
+
+    #main #container #content h1 span {
+        font-weight: 100;
+        color: #D2A1A2;
+    }
+
+    #main #container #content p {
+        width: 75%;
+        margin-left: 0;
+        font-size: 2.5em;
+        line-height: 1.8em;
+    }
+
+    /* Input Field */
+    #main #container #email-field #email-id {
+        width: 50%;
+        margin: 10% 0 15% 16%;
+        padding: 3% 5%;
+        font-size: 3em;
+        border-radius: 50px;
+    }
+
+    #main #container #email-field #submit-button {
+        margin-left: -10%;
+        padding: 3.1% 8%;
+        font-size: 3em;
+        border-radius: 50px;
+    }
+}
+
+
+
+/* Mobile View */
+@media screen and (max-width: 576px) {
+    #main #container {
+        display: block;
+        width: 100%;
+    }
+
+    /* Logo */
+    #main #container #logo-container {
+        width: 100%;
+        height: 30%;
+        margin-bottom: 6%;
+    }
+
+    #main #container #logo-container #web-link #fig {
+        width: 8vw;
+        height: 8vw;
+        margin: 10% 0 0 10%;
+        border: 0.6vw solid #E7A09E;
+    }
+    
+    #main #container #logo-container #web-link #base-apparel {
+        margin-left: 3%;
+        font-size: 4em;
+        letter-spacing: 0.3em;
+        line-height: 1.5em;
+    }
+
+    /* Image */
+    #main #container #image {
+        width: 100%;
+        height: 70vw;
+        margin: 0;
+        background-image: url("./../Images/Image-Landscape@2x.png");
+    }
+
+    /* Content */
+    #main #container #content {
+        display: block;
+        padding: 0;
+        text-align: center;
+    }
+
+    #main #container #content h1 {
+        width: 100%;
+        margin: 10% auto 5%;
+        font-size: 11em;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+    }
+
+    #main #container #content h1 span {
+        font-weight: 100;
+        color: #D2A1A2;
+    }
+
+    #main #container #content p {
+        width: 70%;
+        margin: 3% auto;
+        font-size: 3em;
+        line-height: 1.8em;
+    }
+
+    /* Input Field */
+    #main #container #email-field #email-id {
+        width: 50%;
+        margin: 20% 0 15% 16%;
+        padding: 3% 5%;
+        font-size: 3em;
+    }
+
+    #main #container #email-field #submit-button {
+        margin-left: -10%;
+        padding: 3.1% 8%;
+        font-size: 3em;
+    }
+}
