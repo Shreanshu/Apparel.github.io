@@ -73,24 +73,120 @@ body {
 }
 
 /* Image */
-#main #container #image {
+#main #container #image-slider {
     grid-column: 2 / span 1;
     grid-row: 1 / span 4;
 }
 
-#main #container #image {
+#main #container #image-slider {
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    max-height: 100vh;
     margin: 0;
     box-sizing: border-box;
-    background-image: url("./../Images/Image-Portrait@2x.png");
-    background-size: cover;
+    position: relative;
 }
 
-/* #main #container #image img {
+#main #container #image-slider .slide-container {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    scroll-behavior: smooth;
+}
+
+#main #container #image-slider .slide-container .slide {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    transition: 0.5s ease;
+
+    position: relative;
+}
+
+#main #container #image-slider .slide-container .slide img {
     width: 100%;
     background-size: cover;
-} */
+    transition: 0.5s ease;
+}
+
+#main #container #image-slider .slide-container .slide .control {
+    width: 38px;
+    height: 60px;
+    background-color: white;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 0.5;
+}
+
+#main #container #image-slider .slide-container .slide #prev {
+    left: 0;
+}
+
+#main #container #image-slider .slide-container .slide #next {
+    right: 0;
+}
+
+#main #container #image-slider .slide-container .slide .control .controller {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    border-right: 4px solid black;
+    border-top: 4px solid black;
+    opacity: 0.9;
+}
+
+#main #container #image-slider .slide-container .slide #prev .controller {
+    transform: translateX(20%) translateY(70%) rotate(-135deg);
+}
+
+#main #container #image-slider .slide-container .slide #next .controller {
+    transform: translateX(-20%) translateY(70%) rotate(45deg);
+}
+
+#main #container #image-slider .slide-container .slide .control:hover {
+    opacity: 0.7;
+}
+
+#main #container #image-slider .slide-container .slide .control:hover .controller {
+    opacity: 1;
+}
+
+#main #container #image-slider .slider-nav {
+    width: 40%;
+    height: 3.6%;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#main #container #image-slider .slider-nav a {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.2s;
+}
+
+#main #container #image-slider .slider-nav a:hover {
+    background-color: red;
+    transition: 0.2s;
+}
 
 /* Content */
 #main #container #content {
@@ -138,7 +234,7 @@ body {
 
 #main #container #email-field #submit-button {
     margin-left: -5%;
-    padding: 1.5% 4.5%;
+    padding: 1.6% 4.5% 1.5%;
     font-size: 1em;
     color: #FFFDFE;
     background-color: #E7A09E;
@@ -149,7 +245,7 @@ body {
 }
 
 #main #container #email-field #submit-button:hover {
-    background-color: rgb(42, 42, 255);
+    background-color: rgb(255, 66, 66);
 }
 
 
@@ -159,6 +255,7 @@ body {
     #main #container {
         display: block;
         width: 100%;
+        height: auto;
     }
 
     /* Logo */
@@ -183,11 +280,27 @@ body {
     }
 
     /* Image */
-    #main #container #image {
+    #main #container #image-slider {
         width: 100%;
-        height: 70vw;
+        height: 120vw;
         margin: 0;
-        background-image: url("./../Images/Image-Landscape@2x.png");
+    }
+
+    #main #container #image-slider .slide-container .slide .control {
+        width: 50px;
+        height: 80px;
+    }
+
+    #main #container #image-slider .slide-container .slide .control .controller {
+        width: 30px;
+        height: 30px;
+        border-right: 5px solid black;
+        border-top: 5px solid black;
+    }
+
+    #main #container #image-slider .slider-nav a {
+        width: 12px;
+        height: 12px;
     }
 
     /* Content */
@@ -220,14 +333,14 @@ body {
     #main #container #email-field #email-id {
         width: 50%;
         margin: 10% 0 15% 16%;
-        padding: 3% 5%;
+        padding: 2.5% 5%;
         font-size: 3em;
         border-radius: 50px;
     }
 
     #main #container #email-field #submit-button {
         margin-left: -10%;
-        padding: 3.1% 8%;
+        padding: 2.7% 8% 2.6%;
         font-size: 3em;
         border-radius: 50px;
     }
@@ -264,11 +377,27 @@ body {
     }
 
     /* Image */
-    #main #container #image {
+    #main #container #image-slider {
         width: 100%;
-        height: 70vw;
+        height: 120vw;
         margin: 0;
-        background-image: url("./../Images/Image-Landscape@2x.png");
+    }
+
+    #main #container #image-slider .slide-container .slide .control {
+        width: 40px;
+        height: 60px;
+    }
+
+    #main #container #image-slider .slide-container .slide .control .controller {
+        width: 20px;
+        height: 22px;
+        border-right: 4px solid black;
+        border-top: 4px solid black;
+    }
+
+    #main #container #image-slider .slider-nav a {
+        width: 8px;
+        height: 8px;
     }
 
     /* Content */
@@ -308,7 +437,7 @@ body {
 
     #main #container #email-field #submit-button {
         margin-left: -10%;
-        padding: 3.1% 8%;
+        padding: 3.3% 8% 3.2%;
         font-size: 3em;
     }
 }
